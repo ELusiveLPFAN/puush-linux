@@ -3,12 +3,12 @@
 PUUSH_API_KEY=""
 
 # Puush for Ubuntu/linux
-# Owner : Sunmock Yang
-# www.sunmock.com
-# May 2014
+# For use on Plasma 5
+# Modified by: Eluzive
+# Original Developer: Sunmock Yang
 #
 # Dependencies:
-# - gnome-screenshot
+# - spectacle
 # - curl
 # - zenity
 # - xclip
@@ -96,21 +96,21 @@ case "$1" in
 	-a)
 		echo "Whole Desktop"
 			fileName=$(generateFileName)
-			gnome-screenshot -f "$fileName"
+			spectacle -f -b -n -o "$fileName"
 			puushFile "$fileName"
 		;;
 
 	-b)
 		echo "Area"
 			fileName=$(generateFileName)
-			gnome-screenshot -a -f "$fileName"
+			spectacle -r -b -n -o "$fileName"
 			puushFile "$fileName"
 		;;
 
 	-c)
 		echo "Window"
 			fileName=$(generateFileName)
-			gnome-screenshot -w -f "$fileName"
+			spectacle -a -b -n -o "$fileName"
 			puushFile "$fileName"
 		;;
 
