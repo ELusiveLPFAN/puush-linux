@@ -96,7 +96,7 @@ case "$1" in
 	-a)
 		echo "Whole Desktop"
 			fileName=$(generateFileName)
-			spectacle -f -b -n -o "$fileName"
+			spectacle -m -b -n -o "$fileName"
 			puushFile "$fileName"
 		;;
 
