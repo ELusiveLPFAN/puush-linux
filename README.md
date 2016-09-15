@@ -1,4 +1,4 @@
-Puush in Linux
+Puush in Plasma 5
 =====================
 This is modified script for using it on Plasma 5
 
